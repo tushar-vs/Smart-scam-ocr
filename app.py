@@ -16,8 +16,7 @@ st.set_page_config(page_title="SmartScan AI", layout="wide", page_icon="🧾")
 # This prevents the app from reloading the heavy model every time you click a button.
 @st.cache_resource
 def load_model():
-    # 'en' for English. You can add 'fr', 'de', 'es' list for other languages.
-    # gpu=False ensures it runs on laptops without NVIDIA cards.
+    
     return easyocr.Reader(['en'], gpu=False) 
 
 reader = load_model()
